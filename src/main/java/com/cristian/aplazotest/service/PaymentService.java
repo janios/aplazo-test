@@ -1,5 +1,6 @@
 package com.cristian.aplazotest.service;
 
+import com.cristian.aplazotest.constants.AplazoConstants;
 import com.cristian.aplazotest.mapper.CreditMapper;
 import com.cristian.aplazotest.mapper.RequestMapper;
 import com.cristian.aplazotest.mapper.ResponseMapper;
@@ -47,8 +48,7 @@ public class PaymentService {
           ResponseDto.builder()
               .amount(amountPerTerm)
               .paymentNumber(i + 1)
-              // TODO ADD CONSTANT
-              .paymentDate(LocalDate.now().plusDays(7 * (i + 1)))
+              .paymentDate(LocalDate.now().plusDays(AplazoConstants.PAYMENT_PERIOD * (i + 1)))
               .build();
       response.add(currentResponse);
     }
