@@ -9,6 +9,4 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableJpaAuditing
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "com.cristian.aplazotest.repository")
-public class RepositoryContext {
-
-}
+public class RepositoryContext {}
