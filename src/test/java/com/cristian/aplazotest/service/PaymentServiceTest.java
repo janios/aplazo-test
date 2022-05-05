@@ -9,9 +9,8 @@ import com.cristian.aplazotest.mapper.ResponseMapper;
 import com.cristian.aplazotest.models.dto.RequestDto;
 import com.cristian.aplazotest.models.dto.ResponseDto;
 import com.cristian.aplazotest.models.exception.AplazoException;
-import com.cristian.aplazotest.models.repository.CreditRepository;
-import com.cristian.aplazotest.models.repository.PaymentRepository;
-
+import com.cristian.aplazotest.repository.CreditRepository;
+import com.cristian.aplazotest.repository.PaymentRepository;
 import java.time.LocalDate;
 import java.util.List;
 import org.junit.jupiter.api.Test;
@@ -46,12 +45,10 @@ public class PaymentServiceTest {
     assertNotNull(responseList);
     assertEquals(request.getTerm(), responseList.size());
 
-    for(int i = 0; i<responseList.size();i++){
+    for (int i = 0; i < responseList.size(); i++) {
       ResponseDto currentResponse = responseList.get(i);
-      assertEquals(i+1, currentResponse.getPaymentNumber());
-      assertEquals(LocalDate.now().plusDays(7*(i+1)), currentResponse.getPaymentDate());
+      assertEquals(i + 1, currentResponse.getPaymentNumber());
+      assertEquals(LocalDate.now().plusDays(7 * (i + 1)), currentResponse.getPaymentDate());
     }
   }
-
-
 }
