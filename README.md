@@ -81,7 +81,7 @@ JSON BODY:
     "paymentNumber": 2,
     "amount": 0.202,
     "paymentDate": "2022-05-19"
-  } ...
+  }  
 ]
 ```
 
@@ -106,7 +106,8 @@ JSON BODY:
         "amount": 0.202,
         "paymentDate": "2022-05-12",
         "createTS": "2022-05-05T04:43:13.347+00:00"
-      }...
+      }  
+    ]
   }    
 ]
 ```
