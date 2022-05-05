@@ -19,7 +19,6 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<junit.version>4.12</junit.version>
 		<lombok.version>1.18.20</lombok.version>
 		<maven-compiler-plugin.version>3.6.2</maven-compiler-plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -55,12 +54,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>

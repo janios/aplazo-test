@@ -28,11 +28,10 @@ public class AplazoExceptionHandler {
   private ResponseEntity<AplazoErrorMessage> unhandledException(Exception ex, WebRequest request) {
     log.error("Aplazo Unhandled Exception {} ", ex);
     return new ResponseEntity<>(
-            AplazoErrorMessage.builder()
-                    .message(ex.getMessage())
-                    .httpStatus(HttpStatus.BAD_REQUEST.value())
-                    .build(),
-            HttpStatus.INTERNAL_SERVER_ERROR);
+        AplazoErrorMessage.builder()
+            .message(ex.getMessage())
+            .httpStatus(HttpStatus.BAD_REQUEST.value())
+            .build(),
+        HttpStatus.INTERNAL_SERVER_ERROR);
   }
-
 }

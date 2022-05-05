@@ -1,4 +1,4 @@
-package com.cristian.aplazotest.repository;
+package com.cristian.aplazotest.models.repository;
 
 import com.cristian.aplazotest.models.entities.Payment;
 import java.util.List;
